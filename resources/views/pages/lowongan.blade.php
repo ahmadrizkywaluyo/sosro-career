@@ -72,15 +72,27 @@
                     <option value="Bali">Bali</option>
                     <option value="Pangkal Pinang">Pangkal Pinang</option>
                 </select>
+
+                {{-- FILTER BIDANG PEKERJAAN --}}
+                <select 
+                    id="filterCategory"
+                    class="w-full md:w-1/4 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-700"
+                >
+                    <option value="">Semua Bidang</option>
+                    <option value="IT">IT</option>
+                    <option value="HC">Human Capital</option>
+                    <option value="Sales Operation">Sales Operation</option>
+                </select>
             </div>
 
             {{-- GRID JOB LIST --}}
-            <div id="jobList" class="grid md:grid-cols-2 gap-6">
+            <div id="jobList" class="grid md:grid-cols-3 gap-6">
 
                 {{-- ITEM 1 --}}
                 <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
                      data-title="Staff Administrasi"
-                     data-location="Jakarta Timur">
+                     data-location="Jakarta Timur"
+                     data-category="HC">
 
                     <h3 class="text-xl font-semibold text-red-700 mb-1">Staff Administrasi</h3>
                     <p class="text-gray-600 mb-3">Penempatan: Jakarta Timur</p>
@@ -112,7 +124,8 @@
                 {{-- ITEM 2 --}}
                 <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
                      data-title="Quality Control"
-                     data-location="Cikarang">
+                     data-location="Cikarang"
+                     data-category="IT">
 
                     <h3 class="text-xl font-semibold text-red-700 mb-1">Quality Control</h3>
                     <p class="text-gray-600 mb-3">Penempatan: Cikarang</p>
@@ -142,7 +155,8 @@
                 {{-- ITEM 3 --}}
                 <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
                      data-title="Sales Supervisor"
-                     data-location="Bali">
+                     data-location="Bali"
+                     data-category="Sales">
 
                     <h3 class="text-xl font-semibold text-red-700 mb-1">Sales Supervisor</h3>
                     <p class="text-gray-600 mb-3">Penempatan: Bali</p>
@@ -172,7 +186,8 @@
                 {{-- ITEM 4 --}}
                 <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
                      data-title="Unit Manager"
-                     data-location="Pangkal Pinang">
+                     data-location="Pangkal Pinang"
+                     data-category="Sales">
 
                     <h3 class="text-xl font-semibold text-red-700 mb-1">Unit Manager</h3>
                     <p class="text-gray-600 mb-3">Penempatan: Pangkal Pinang</p>
@@ -199,33 +214,248 @@
                     </a>
                 </div>
 
+                {{-- ITEM 5 --}}
+                <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+                     data-title="Quality Control"
+                     data-location="Cikarang"
+                     data-category="IT">
+
+                    <h3 class="text-xl font-semibold text-red-700 mb-1">Quality Control</h3>
+                    <p class="text-gray-600 mb-3">Penempatan: Cikarang</p>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Kualifikasi</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Minimal D3 Kimia Pangan/Teknik Industri</li>
+                            <li>Mengerti standar QC</li>
+                        </ul>
+                    </details>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Jobdesk</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Pengecekan kualitas bahan baku</li>
+                            <li>Pelaporan hasil analisa</li>
+                        </ul>
+                    </details>
+
+                    <a href="{{ route('login') }}" 
+                        class="inline-block mt-4 bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                        Lamar
+                    </a>
+                </div>
+
+                {{-- ITEM 6 --}}
+                <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+                     data-title="Sales Supervisor"
+                     data-location="Bali"
+                     data-category="Sales">
+
+                    <h3 class="text-xl font-semibold text-red-700 mb-1">Sales Supervisor</h3>
+                    <p class="text-gray-600 mb-3">Penempatan: Bali</p>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Kualifikasi</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Pengalaman 2 tahun Sales</li>
+                            <li>Target oriented</li>
+                        </ul>
+                    </details>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Jobdesk</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Mengawasi tim sales</li>
+                            <li>Mencapai target bulanan</li>
+                        </ul>
+                    </details>
+
+                    <a href="{{ route('login') }}" 
+                        class="inline-block mt-4 bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                        Lamar
+                    </a>
+                </div>
+
+                {{-- ITEM 7 --}}
+                <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+                     data-title="Unit Manager"
+                     data-location="Pangkal Pinang"
+                     data-category="Sales">
+
+                    <h3 class="text-xl font-semibold text-red-700 mb-1">Unit Manager</h3>
+                    <p class="text-gray-600 mb-3">Penempatan: Pangkal Pinang</p>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Kualifikasi</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Pemimpin yang baik</li>
+                            <li>Paham operasional distribusi</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary class="cursor-pointer font-semibold">Jobdesk</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Mengelola cabang</li>
+                            <li>Monitoring kinerja tim</li>
+                        </ul>
+                    </details>
+
+                    <a href="{{ route('login') }}" 
+                        class="inline-block mt-4 bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                        Lamar
+                    </a>
+                </div>
+
+                {{-- ITEM 8 --}}
+                <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+                     data-title="Quality Control"
+                     data-location="Cikarang"
+                     data-category="IT">
+
+                    <h3 class="text-xl font-semibold text-red-700 mb-1">Quality Control</h3>
+                    <p class="text-gray-600 mb-3">Penempatan: Cikarang</p>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Kualifikasi</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Minimal D3 Kimia Pangan/Teknik Industri</li>
+                            <li>Mengerti standar QC</li>
+                        </ul>
+                    </details>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Jobdesk</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Pengecekan kualitas bahan baku</li>
+                            <li>Pelaporan hasil analisa</li>
+                        </ul>
+                    </details>
+
+                    <a href="{{ route('login') }}" 
+                        class="inline-block mt-4 bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                        Lamar
+                    </a>
+                </div>
+
+                {{-- ITEM 9 --}}
+                <div class="job-card border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition"
+                     data-title="Sales Supervisor"
+                     data-location="Bali"
+                     data-category="Sales">
+
+                    <h3 class="text-xl font-semibold text-red-700 mb-1">Sales Supervisor</h3>
+                    <p class="text-gray-600 mb-3">Penempatan: Bali</p>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Kualifikasi</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Pengalaman 2 tahun Sales</li>
+                            <li>Target oriented</li>
+                        </ul>
+                    </details>
+
+                    <details class="mb-3">
+                        <summary class="cursor-pointer font-semibold">Jobdesk</summary>
+                        <ul class="list-disc ml-5 text-gray-600">
+                            <li>Mengawasi tim sales</li>
+                            <li>Mencapai target bulanan</li>
+                        </ul>
+                    </details>
+
+                    <a href="{{ route('login') }}" 
+                        class="inline-block mt-4 bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition">
+                        Lamar
+                    </a>
+                </div>
+
             </div>
+
+            <div id="pagination" class="flex justify-center gap-2 mt-10"></div>
+
         </div>
     </section>
 
-    {{-- SCRIPT SEARCH & FILTER --}}
+    {{-- SCRIPT SEARCH, FILTER LOKASI, FILTER BIDANG --}}
     <script>
         const searchInput = document.getElementById("searchInput");
         const filterLocation = document.getElementById("filterLocation");
+        const filterCategory = document.getElementById("filterCategory");
         const jobCards = document.querySelectorAll(".job-card");
 
         function filterJobs() {
             const keyword = searchInput.value.toLowerCase();
             const location = filterLocation.value;
+            const category = filterCategory.value;
 
             jobCards.forEach(card => {
                 const title = card.dataset.title.toLowerCase();
                 const loc = card.dataset.location;
+                const cat = card.dataset.category;
 
                 const matchKeyword = title.includes(keyword);
                 const matchLocation = location === "" || loc === location;
+                const matchCategory = category === "" || cat === category;
 
-                card.style.display = matchKeyword && matchLocation ? "block" : "none";
+                card.style.display = matchKeyword && matchLocation && matchCategory 
+                    ? "block" 
+                    : "none";
             });
+
+            setupPagination();
         }
 
         searchInput.addEventListener("input", filterJobs);
         filterLocation.addEventListener("change", filterJobs);
+        filterCategory.addEventListener("change", filterJobs);
+        const jobList = document.getElementById("jobList");
+        const pagination = document.getElementById("pagination");
+        const itemsPerPage = 6;  // jumlah card per halaman
+        let currentPage = 1;
+        
+        function setupPagination() {
+            const visibleCards = [...jobCards].filter(card => card.style.display !== "none");
+            const totalPages = Math.ceil(visibleCards.length / itemsPerPage);
+        
+            visibleCards.forEach((card, index) => {
+                card.style.display =
+                    index >= (currentPage - 1) * itemsPerPage &&
+                    index < currentPage * itemsPerPage
+                        ? "block"
+                        : "none";
+            });
+        
+            renderPagination(totalPages);
+        }
+        
+        function renderPagination(totalPages) {
+            pagination.innerHTML = "";
+        
+            for (let page = 1; page <= totalPages; page++) {
+                const btn = document.createElement("button");
+                btn.textContent = page;
+                btn.className =
+                    "px-4 py-2 border rounded " +
+                    (page === currentPage
+                        ? "bg-red-700 text-white"
+                        : "bg-white text-red-700");
+        
+                btn.addEventListener("click", () => {
+                    currentPage = page;
+                    setupPagination();
+                });
+        
+                pagination.appendChild(btn);
+            }
+        }
+        
+        // initialize
+        setupPagination();
     </script>
+
+    {{-- Script Pagination --}}
+    {{-- <script>
+</script> --}}
+
 
 </x-app-layout>

@@ -76,7 +76,7 @@
                     </ul>
                 </div>
 
-                <img src="https://images.unsplash.com/photo-1588075592405-459b3a3c481d"
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
                      class="rounded-xl shadow-lg h-80 object-cover w-full">
 
             </div>

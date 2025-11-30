@@ -3,12 +3,13 @@
     {{-- HERO SECTION DENGAN CAROUSEL --}}
     <section 
         x-data="{ current: 0, slides: [
-            { img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80', caption: 'Bersama Sosro Membangun Karier Cerah' },
-            { img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80', caption: 'Program Pelatihan dan Pengembangan' },
-            { img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80', caption: 'Jadilah Bagian dari Keluarga Sosro' }
+            { img: '../assets/images/beranda sosro.png', caption: 'Selamat Datang di Sosro Karier', subcaption: 'Dapatkan informasi lowongan pekerjaan terbaru disini' },
+            {{-- { img: '../assets/images/beranda sosro new.png', caption: 'Bersama Sosro Membangun Karier Cerah', subcaption: 'Dapatkan informasi lowongan pekerjaan terbaru disini' }, --}}
+            { img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80', caption: 'Program Pelatihan dan Pengembangan', subcaption: 'Mendukung pengembangan karyawan' },
+            { img: '../assets/images/our_program.png', caption: 'Jadilah Bagian dari Keluarga Sosro', subcaption: 'Untuk masa depan yang lebih cerah'}
         ] }"
         x-init="setInterval(() => current = (current + 1) % slides.length, 4000)"
-        class="relative w-full h-[75vh] overflow-hidden"
+        class="relative w-full h-[90vh] overflow-hidden"
     >
         <template x-for="(slide, index) in slides" :key="index">
             <div 
@@ -20,8 +21,10 @@
                 x-transition:leave-end="opacity-0"
             >
                 <img :src="slide.img" alt="" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
                     <h2 x-text="slide.caption" class="text-3xl md:text-5xl text-white font-bold text-center"></h2>
+                    <p x-text="slide.subcaption" class="text-lg md:text-xl text-white text-center mt-5"></p> 
                 </div>
             </div>
         </template>
@@ -46,21 +49,26 @@
                 Kami terus berkembang untuk menciptakan lingkungan kerja yang mendorong kreativitas dan pertumbuhan karier setiap individu.
             </p>
 
-            <div class="grid md:grid-cols-3 gap-8 mt-12">
-                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-md transition">
+            <div class="grid md:grid-cols-4 gap-8 mt-12">
+                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-xl transition">
                     <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" class="w-16 mx-auto mb-4" alt="Karier">
-                    <h3 class="text-xl font-semibold text-red-700 mb-2">Karier Berkualitas</h3>
-                    <p class="text-gray-600">Kami memberikan kesempatan bagi talenta terbaik untuk berkembang melalui pelatihan dan pengalaman nyata di berbagai bidang.</p>
+                    <h3 class="text-xl font-bold text-red-700 mb-2">Niat Baik Hasil Baik</h3>
+                    <p class="text-gray-200">_______________</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-md transition">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" class="w-16 mx-auto mb-4" alt="Inovasi">
-                    <h3 class="text-xl font-semibold text-red-700 mb-2">Inovasi Tanpa Batas</h3>
-                    <p class="text-gray-600">Kami mendorong setiap karyawan untuk berinovasi dan menemukan cara baru dalam menciptakan produk terbaik bagi konsumen.</p>
+                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-xl transition">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" class="w-16 mx-auto mb-4" alt="Karier">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">TERUJI</h3>
+                    <p class="text-gray-600">Tekad, Rencana, Ulet, Jeli, Iman</p>
                 </div>
-                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-md transition">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="w-16 mx-auto mb-4" alt="Kebersamaan">
-                    <h3 class="text-xl font-semibold text-red-700 mb-2">Budaya Kebersamaan</h3>
-                    <p class="text-gray-600">Kami membangun suasana kerja yang hangat, saling mendukung, dan berlandaskan nilai kekeluargaan.</p>
+                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-xl transition">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" class="w-16 mx-auto mb-4" alt="Karier">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">ACC</h3>
+                    <p class="text-gray-600">Accountable, Care, Credible</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-2xl shadow hover:shadow-xl transition">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" class="w-16 mx-auto mb-4" alt="Karier">
+                    <h3 class="text-xl font-bold text-red-700 mb-2">3H</h3>
+                    <p class="text-gray-600">Humble, Humility, Humanity</p>
                 </div>
             </div>
         </div>

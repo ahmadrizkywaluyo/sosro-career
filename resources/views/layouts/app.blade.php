@@ -63,7 +63,7 @@
             <div class="flex items-center space-x-3">
                 <img src="{{ asset('assets/images/SGS Logo-Putih.png') }}" 
                     alt="Logo Sosro" 
-                    class="h-8 w-auto">
+                    class="h-10 w-auto">
             </div>
 
             {{-- DESKTOP MENU --}}
@@ -72,7 +72,7 @@
                 {{-- BERANDA --}}
                 <a href="{{ route('beranda') }}"
                 class="relative group font-medium 
-                {{ request()->routeIs('beranda') ? 'text-white' : 'text-gray-200' }}">
+                {{ request()->routeIs('beranda') ? 'text-white' : 'text-gray-100' }}">
                     
                     Beranda
 
@@ -84,7 +84,7 @@
                 {{-- TENTANG --}}
                 <a href="{{ route('tentang') }}"
                 class="relative group font-medium 
-                {{ request()->routeIs('tentang') ? 'text-white' : 'text-gray-200' }}">
+                {{ request()->routeIs('tentang') ? 'text-white' : 'text-gray-100' }}">
                     
                     Tentang
 
@@ -96,7 +96,7 @@
                 {{-- PROGRAM --}}
                 <a href="{{ route('program') }}"
                 class="relative group font-medium 
-                {{ request()->routeIs('program') ? 'text-white' : 'text-gray-200' }}">
+                {{ request()->routeIs('program') ? 'text-white' : 'text-gray-100' }}">
                     
                     Program
 
@@ -108,7 +108,7 @@
                 {{-- LOWONGAN --}}
                 <a href="{{ route('lowongan') }}"
                 class="relative group font-medium 
-                {{ request()->routeIs('lowongan') ? 'text-white' : 'text-gray-200' }}">
+                {{ request()->routeIs('lowongan') ? 'text-white' : 'text-gray-100' }}">
                     
                     Lowongan
 
@@ -120,7 +120,7 @@
                 {{-- KONTAK --}}
                 <a href="{{ route('kontak') }}"
                 class="relative group font-medium 
-                {{ request()->routeIs('kontak') ? 'text-white' : 'text-gray-200' }}">
+                {{ request()->routeIs('kontak') ? 'text-white' : 'text-gray-100' }}">
                     
                     Kontak
 
@@ -243,12 +243,13 @@
 
             {{-- Kolom 2: Layanan --}}
             <div>
-                <h4 class="text-white font-semibold mb-3">Layanan</h4>
+                <h4 class="text-white font-semibold mb-3"></h4> 
+                {{-- layanan --}}
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white transition">Produk Kami</a></li>
+                    {{-- <li><a href="#" class="hover:text-white transition">Produk Kami</a></li>
                     <li><a href="#" class="hover:text-white transition">Distribusi</a></li>
                     <li><a href="#" class="hover:text-white transition">Kemitraan</a></li>
-                    <li><a href="#" class="hover:text-white transition">Kontak Bisnis</a></li>
+                    <li><a href="#" class="hover:text-white transition">Kontak Bisnis</a></li> --}}
                 </ul>
             </div>
 
@@ -271,18 +272,19 @@
                     <li><a href="#" class="hover:text-white transition">FAQ</a></li>
                 </ul>
 
-                <div class="flex space-x-4">
+                <br>
+                <div class="flex space-x-5">
                     <a href="https://www.instagram.com/sosrocareer/" class="text-red-100 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
                     <a href="https://www.linkedin.com/company/pt-sinar-sosro-gunung-slamat/" class="text-red-100 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
                     <a href="https://www.tiktok.com/@lifeatsosro" class="text-red-100 hover:text-white"><i class="fab fa-tiktok text-xl"></i></a>
-                    <a href="#" class="text-red-100 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a>
+                    {{-- <a href="#" class="text-red-100 hover:text-white"><i class="fab fa-whatsapp text-xl"></i></a> --}}
                 </div>
             </div>
         </div>
 
         {{-- Copyright --}}
         <div class="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-white">
-            <p>© {{ date('Y') }} PT Sinar Sosro Gunung Slamat. All rights reserved.</p>
+            <p>© {{ date('Y') }} PT Sinar Sosro Gunung Slamat. All rights reserved.</p> <br>
             <p>Made with ❤️ by <span class="text-red-100 font-semibold">Sosro Career Team</span></p>
         </div>
     </footer>

@@ -1,22 +1,3 @@
-{{-- <x-app-layout>
-    <section class="py-20 bg-white text-center">
-        <div class="max-w-5xl mx-auto px-6">
-            <h1 class="text-4xl font-bold text-red-700 mb-6">Tentang PT Sinar Sosro Gunung Slamat</h1>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                PT Sinar Sosro Gunung Slamat adalah pelopor minuman teh siap minum di Indonesia, 
-                dikenal melalui produk legendaris <strong>Teh Botol Sosro</strong>. 
-                Didirikan dengan semangat menyebarkan kesegaran dan kebersamaan, 
-                kami terus tumbuh dengan prinsip <em>“Apapun Makanannya, Minumnya Teh Botol Sosro.”</em>
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-                Melalui platform e-recruitment ini, kami ingin memberikan kesempatan bagi talenta muda 
-                untuk berkarier dan berkembang bersama perusahaan yang menjunjung tinggi nilai inovasi dan kerja sama.
-            </p>
-        </div>
-    </section>
-</x-app-layout> --}}
-
-
 <x-app-layout>
 
     {{-- SECTION: HERO ABOUT --}}
@@ -26,7 +7,7 @@
                 Tentang PT Sinar Sosro Gunung Slamat
             </h1>
 
-            <p class="text-gray-700 leading-relaxed text-lg mb-6">
+            <p class="text-gray-700 leading-relaxed text-lg mb-9">
                 PT Sinar Sosro Gunung Slamat merupakan pelopor minuman teh siap minum di Indonesia,
                 dikenal melalui produk ikonik <strong>Teh Botol Sosro</strong>.
                 Dengan semangat menghadirkan kesegaran dan kebersamaan, kami terus berkembang
@@ -154,7 +135,7 @@
             <div class="grid md:grid-cols-3 gap-10">
 
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786"
+                    <img src="../assets/images/training sosro.png"
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Pelatihan Karyawan</h3>
@@ -163,7 +144,7 @@
                 </div>
 
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                    <img src="../assets/images/outbound_sosro.png"
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Outbound & Team Building</h3>
@@ -172,7 +153,7 @@
                 </div>
 
                 <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0"
+                    <img src="../assets/images/kegiatan sosial sosro.png"
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">CSR & Kegiatan Sosial</h3>
